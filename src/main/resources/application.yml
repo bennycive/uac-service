@@ -1,0 +1,27 @@
+#spring.application.name=uac-service
+
+
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/uac_db
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  security:
+       user:
+          name: benny
+          password: 1234
+
+jwt:
+  secret: your_super_secret_key
+  expirationMs: 86400000
+
+
